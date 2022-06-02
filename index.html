@@ -80,6 +80,67 @@
         </div>
     </div>
 
+     <!-- Modal Reservation table -->
+     <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row align-items-center">
+                            <h6 for="guest" class="col-md-2">Number of Guests</h6>
+                            <div class="btn-group col-md-5 d-flex justify-content-between" role="group" aria-label="Basic radio toggle button group">
+                                <div><input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked><label>1</label></div>
+                                <div><input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"><label>2</label></div>
+                                <div><input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"><label>3</label></div>
+                                <div><input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off"><label>4</label></div>
+                                <div><input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off"><label>5</label></div>
+                                <div><input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off"><label>6</label></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row align-items-center">
+                            <h6 for="sectorSmoke" class="col-md-2">Section</h6>
+                            <div class="btn-group btn-group-toggle col-md-6 d-flex " data-toggle="buttons">
+                                <label class="btn btn-success col-md-4 active">
+                                  <input type="radio" name="options" id="option1" checked> Non-smoking
+                                </label>
+                                <label class="btn btn-danger col-md-3">
+                                  <input type="radio" name="options" id="option2"> Smoking
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group row align-items-center">
+                            <h6 for="datetime" class="col-md col-md-2 col-form-label">Date and Time</h6>
+                            <div class="col-md-4">
+                                <input type="" class="form-control" id="date" name="date" 
+                                    placeholder="Date">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="" class="form-control" id="time" name="time"
+                                    placeholder="Time">
+                            </div>
+                        </div>
+
+                        <div class="form-group row align-items-center">
+                            <h6 for="guest" class="col-md-2"></h6>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-secondary"><h6 class="m-auto">Cancel</h6></button>
+                                <button type="button" class="btn btn-primary"><h6 class="m-auto">Reserve</h6></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -92,16 +153,14 @@
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <a type="button" class="btn btn-block btn-sm btn-warning"
-                        data-toggle="tooltip" data-html="true" 
-                        title="Or Call us at <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#reserveform">Reserve Table</a>
+                        data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
 
     <div class="container">
-        
+
         <div class="row row-content">
             <div class="col">
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
@@ -167,7 +226,6 @@
             </div>
         </div>
 
-
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
@@ -200,50 +258,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="row row-content justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form id="reserveform">
-                            <div class="form-group row">
-                                <h6 for="guest" class="col-md-2">Number of Guests</h6>
-                                <div class="btn-group col-md-5 d-flex justify-content-between" role="group" aria-label="Basic radio toggle button group">
-                                    <div><input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked><label>1</label></div>
-                                    <div><input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"><label>2</label></div>
-                                    <div><input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"><label>3</label></div>
-                                    <div><input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off"><label>4</label></div>
-                                    <div><input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off"><label>5</label></div>
-                                    <div><input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off"><label>6</label></div>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <h6 for="datetime" class="col-md col-md-2 col-form-label">Date and Time</h6>
-                                <div class="col-md-4">
-                                    <input type="" class="form-control" id="date" name="date" 
-                                        placeholder="Date">
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="" class="form-control" id="time" name="time"
-                                        placeholder="Time">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <h6 for="guest" class="col-md-2"></h6>
-                                <div class="col-md-4">
-                                    <button type="button" class="btn btn-primary"><h6 class="m-auto">Reserve</h6></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
     </div>
 
     <footer class="footer">
@@ -293,12 +307,6 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
-    <!-- Tooltip -->
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>
